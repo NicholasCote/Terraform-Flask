@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html>
+    <title>Home </title>
+        <link rel="canonical" href="https://ncar.github.io/cisl-cloud/"/>
+        <meta property="og:title" content="Home"/>
+        <meta property="og:url" content="https://ncar.github.io/cisl-cloud/"/>
+        <meta property="og:site_name" content="cislexample"/>
+        <meta property="og:type" content="website"/>
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="{{url_for('static',  filename='style.css')}}" type="text/css">
+    <script src="https://code.jquery.com/jquery-3.6.1.min.js" integrity="sha256-o88AwQnZB+VDvE9tvIXrMQaPlFFSUTR+nldQm1LuPXQ=" crossorigin="anonymous"></script>
+    <script>
+        $(function(){
+            $('#header').load("{{ url_for('header') }}")
+        })
+        $(function(){
+            $('#navbar-main').load("{{ url_for('navbar') }}")
+        })
+    </script>
+    <body>
+        <div id="header"></div>
+        <div id="navbar-main"></div>
+        <h1>A template</h1>
+            <div class="mid-bold">
+                <p>
+            This is a template for a flask application for CISL
+                </p>
+            </div>
+    </body>
+</html>
